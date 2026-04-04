@@ -2,50 +2,24 @@
 require_once __DIR__ . '/config.php';
 
 // Dynamic URL for canonical & OG
-$currentUrl = "https://www.parrishft.com" . $_SERVER['REQUEST_URI'];
+$currentUrl = "https://" . ($_SERVER['HTTP_HOST'] ?? 'localhost') . $_SERVER['REQUEST_URI'];
 
-// Dynamic title (fallback if not set)
-$pageTitle = $pageTitle ?? "Reliable Nationwide Freight Solutions";
+// Dynamic title (fallback)
+$pageTitle = $pageTitle ?? "Cartronique Automotive Locksmith";
 ?>
-
-<!-- STICKY HOURS BAR -->
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <title><?= $pageTitle ?> | <?= SITE_NAME ?></title>
-
-<meta name="description" content="Parrish Freight Transport provides reliable nationwide freight solutions including flatbed, step deck, reefer, and oversized load transportation.">
-
-<meta name="keywords" content="freight transport, flatbed trucking, step deck hauling, oversized load transport, logistics company">
-
+<meta name="description" content="Cartronique Automotive Locksmith provides expert car key programming, replacement, key cutting, GPS tracking, ignition repair, car alarm installation, and more in Nairobi, Kenya.">
+<meta name="keywords" content="car locksmith, key programming, key replacement, key cutting, car GPS tracking, ignition repair, car alarm system, electronic steering lock">
 <meta name="author" content="<?= SITE_NAME ?>">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Robots -->
 <meta name="robots" content="index, follow">
-
-<!-- Canonical -->
 <link rel="canonical" href="<?= $currentUrl ?>">
-
-<!-- Preload Hero Image -->
-<link rel="preload" as="image" href="<?= BASE_URL ?>assets/images/loading.jpg">
-
-<!-- Open Graph -->
-<meta property="og:title" content="<?= $pageTitle ?> | <?= SITE_NAME ?>">
-<meta property="og:description" content="Reliable nationwide freight and logistics solutions.">
-<meta property="og:image" content="<?= BASE_URL ?>assets/images/flatbed1.webp">
-<meta property="og:url" content="<?= $currentUrl ?>">
-<meta property="og:type" content="website">
-
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="<?= BASE_URL ?>assets/images/favicon.png">
 
 <!-- Tailwind -->
@@ -56,199 +30,158 @@ $pageTitle = $pageTitle ?? "Reliable Nationwide Freight Solutions";
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/main.css">
-
-<!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" rel="stylesheet">
-
-<!-- Structured Data (SEO Boost) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Parrish Freight Transport",
-  "url": "https://www.parrishft.com",
-  "logo": "https://www.parrishft.com/assets/images/favicon.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-423-680-1299",
-    "contactType": "customer service"
-  }
-}
-</script>
-
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        brand: '<?= THEME_COLOR ?>'
-      }
-    }
-  }
-}
-</script>
-
 </head>
 
-<body class="bg-[#141414] text-white">
+<body class="bg-[#141414] text-black">
 
 <!-- HEADER -->
-<header class="bg-[#1a1a1a] sticky top-0 z-50 border-b border-[#222]">
-    
-    <div id="hoursBar" class="fixed top-0 left-0 w-full bg-black border-b border-[#222] text-white z-50">
+<header class="sticky top-0 z-50 shadow-sm">
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-between items-center text-sm">
+  <!-- TOP BAR: OPENING HOURS -->
+<div class="w-full bg-black border-b border-[#222] text-white z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-between items-center text-sm sm:text-base">
 
-    <!-- LEFT: STATUS -->
-    <div class="flex items-center gap-2">
-      <i class="fa-solid fa-clock text-green-500"></i>
-      <span id="liveStatus" class="font-semibold text-xs sm:text-sm"></span>
+    <!-- STATUS -->
+    <div class="flex items-center gap-3">
+
+      <!-- CLOCK -->
+      <i class="fa-solid fa-clock text-white-500 text-lg"></i>
+
+      <!-- STATUS DOT -->
+      <span id="statusDot" class="w-3 h-3 rounded-full inline-block"></span>
+
+      <!-- TEXT -->
+      <span id="liveStatus" class="font-semibold">
+        Checking...
+      </span>
+
     </div>
 
-    <!-- RIGHT: HOURS (NOW VISIBLE ON MOBILE) -->
-    <div class="flex items-center gap-2 text-gray-400 text-[11px] sm:text-sm">
+    <!-- HOURS -->
+    <div class="flex items-center gap-2 text-gray-400">
       <i class="fa-solid fa-calendar-days"></i>
-      <span>Mon - Sat: 8AM – 7PM</span>
+      <span>Mon - Sat: 8AM – 6PM</span>
     </div>
 
   </div>
-
 </div>
 
+<!-- MAIN NAV -->
+<div class="bg-white max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
-<div class="h-[42px]"></div>
+  <!-- LOGO -->
+  <a href="<?= BASE_URL ?>" class="text-1xl font-extrabold tracking-tight">
+    <span class="text-black uppercase font-bold">CARTRONIQUE</span> 
+    <span class="text-red-600 uppercase font-bold">SYSTEM</span>
+  </a>
 
-<div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
+  <!-- DESKTOP NAV -->
+  <nav class="hidden md:flex flex-1 justify-center gap-6 font-medium text-[#1E3A8A]">
 
+      <a href="<?= BASE_URL ?>" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
 
+      <a href="<?= BASE_URL ?>about" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+        <i class="fa-solid fa-building"></i> About Us
+      </a>
 
-<!-- LOGO -->
-<a href="<?= BASE_URL ?>" class="text-lg font-bold tracking-wide">
-PFT
-</a>
-
-<!-- RIGHT SIDE -->
-<div class="flex items-center gap-6 ml-auto">
-
-<!-- PHONE -->
-<a href="tel:+14236801299" class="flex items-center gap-2 hover:text-green-400 transition">
-<i class="fa-solid fa-phone text-green-500"></i>
-<span class="hidden sm:inline">1-423-680-1299</span>
-</a>
-
-<!-- EMAIL -->
-<a href="mailto:info@parrishft.com" class="flex items-center gap-2 hover:text-red-400 transition">
-<i class="fa-solid fa-envelope text-red-500"></i>
-<span class="hidden sm:inline">info@parrishft.com</span>
-</a>
-
-<!-- MOBILE MENU BUTTON -->
-<button id="menuBtn" aria-label="Open Menu" class="text-xl text-white md:hidden ml-2">
-<i class="fa-solid fa-bars"></i>
-</button>
-
+      <!-- SERVICES MEGA MENU -->
+      <div class="relative">
+        <button class="flex items-center gap-2 hover:text-red-500 transition duration-300" id="servicesBtn">
+          <i class="fa-solid fa-key"></i> Services <i class="fa fa-chevron-down text-xs"></i>
+        </button>
+        <div id="megaMenu" class="absolute hidden bg-white p-6 shadow-lg mt-3 rounded-lg min-w-[360px] z-50 text-[#1E3A8A] grid grid-cols-2 gap-4 transition-all duration-300">
+  <a href="<?= BASE_URL ?>services/key-programming" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-key"></i> Car Key Programming & ECU
+  </a>
+  <a href="<?= BASE_URL ?>services/key-replacement" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-key"></i> Lost Car Key Replacement
+  </a>
+  <a href="<?= BASE_URL ?>services/key-cutting" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-keyboard"></i> Key Cutting & Duplication
+  </a>
+  <a href="<?= BASE_URL ?>services/gps-car-tracking" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-location-dot"></i> GPS Car Tracking
+  </a>
+  <a href="<?= BASE_URL ?>services/ignition-repair" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-car-battery"></i> Ignition Repair & Replacement
+  </a>
+  <a href="<?= BASE_URL ?>services/car-alarm-system" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-bell"></i> Car Alarm System
+  </a>
+  <a href="<?= BASE_URL ?>services/car-radio-installation" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-radio"></i> Car Radio Unlocking & Installation
+  </a>
+  <a href="<?= BASE_URL ?>services/egr-dpf-delete" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-cogs"></i> EGR & DPF Delete
+  </a>
+  <a href="<?= BASE_URL ?>services/electronic-steering-lock" class="hover:text-red-500 flex items-center gap-2">
+    <i class="fa-solid fa-lock"></i> Electronic Steering Lock
+  </a>
 </div>
+      </div>
 
-</div>
+      <a href="<?= BASE_URL ?>service-areas" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+        <i class="fa-solid fa-map-location-dot"></i> Service Areas
+      </a>
+      <a href="<?= BASE_URL ?>contact" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+        <i class="fa-solid fa-envelope"></i> Contact Us
+      </a>
 
+    </nav>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="md:hidden text-black text-2xl ml-3">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
 </header>
 
-<!-- OVERLAY -->
-<div id="mobileOverlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+<!-- MOBILE OVERLAY -->
+<div id="mobileOverlay" class="fixed inset-0 bg-black/50 hidden z-40 backdrop-blur-sm"></div>
 
 <!-- MOBILE MENU -->
-<div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 bg-[#1a1a1a]/95 backdrop-blur-md shadow-2xl transform translate-x-full transition-transform duration-500 z-50">
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-500 z-50">
+  <div class="p-6 flex flex-col gap-6 font-semibold h-full text-[#1E3A8A]">
 
-<div class="p-6 flex flex-col gap-6 font-semibold h-full text-gray-200">
+    <div class="flex justify-between items-center border-b pb-4">
+      <span class="text-lg font-bold">CARTRONIQUE <span class="text-red-600">SYSTEM</span></span>
+      <button id="closeMenu" aria-label="Close Menu">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
 
-<!-- HEADER -->
-<div class="flex justify-between border-b pb-4">
-<span class="text-lg">Parrish Family Trucking</span>
-<button id="closeMenu" aria-label="Close Menu">
-<i class="fa fa-times"></i>
-</button>
+    <a href="<?= BASE_URL ?>" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="<?= BASE_URL ?>about" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-building"></i> About Us</a>
+
+    <!-- MOBILE SERVICES ACCORDION -->
+    <button id="mobileServicesBtn" class="flex justify-between items-center w-full py-2">
+      <span class="flex items-center gap-3"><i class="fa-solid fa-key"></i> Services</span>
+      <i id="mobileServicesIcon" class="fa fa-chevron-down transition-transform duration-300"></i>
+    </button>
+<div id="mobileServicesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 flex flex-col ml-4 gap-3">
+  <a href="<?= BASE_URL ?>services/key-programming" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-key"></i> Car Key Programming & ECU</a>
+  <a href="<?= BASE_URL ?>services/key-replacement" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-key"></i> Lost Car Key Replacement</a>
+  <a href="<?= BASE_URL ?>services/key-cutting" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-keyboard"></i> Key Cutting & Duplication</a>
+  <a href="<?= BASE_URL ?>services/gps-car-tracking" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> GPS Car Tracking</a>
+  <a href="<?= BASE_URL ?>services/ignition-repair" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-car-battery"></i> Ignition Repair & Replacement</a>
+  <a href="<?= BASE_URL ?>services/car-alarm-system" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-bell"></i> Car Alarm System</a>
+  <a href="<?= BASE_URL ?>services/car-radio-installation" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-radio"></i> Car Radio Unlocking & Installation</a>
+  <a href="<?= BASE_URL ?>services/egr-dpf-delete" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-cogs"></i> EGR & DPF Delete</a>
+  <a href="<?= BASE_URL ?>services/electronic-steering-lock" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-lock"></i> Electronic Steering Lock</a>
 </div>
 
-<!-- HOME -->
-<a href="<?= BASE_URL ?>" class="flex items-center gap-3 hover:text-red-500">
-<i class="fa-solid fa-house"></i> Home
-</a>
+    <a href="<?= BASE_URL ?>service-areas" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-map-location-dot"></i> Service Areas</a>
+    <a href="<?= BASE_URL ?>contact" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-envelope"></i> Contact Us</a>
 
-<!-- ABOUT -->
-<a href="<?= BASE_URL ?>about" class="flex items-center gap-3 hover:text-red-500">
-<i class="fa-solid fa-building"></i> About
-</a>
+    <a href="<?= BASE_URL ?>contact" class="bg-red-600 text-white px-5 py-2 rounded-full text-center mt-auto hover:bg-red-700 transition duration-300">Request Quote</a>
 
-<!-- SERVICES -->
-<button id="mobileServicesBtn" class="flex justify-between items-center w-full">
-<span class="flex items-center gap-3">
-<i class="fa-solid fa-truck"></i> Services
-</span>
-<i id="mobileServicesIcon" class="fa fa-chevron-down transition-transform"></i>
-</button>
-
-<div id="mobileServicesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all flex flex-col ml-6 gap-3">
-
-<a href="<?= BASE_URL ?>services/flatbed" class="flex items-center gap-3">
-<i class="fa-solid fa-trailer"></i> Flatbed
-</a>
-
-<a href="<?= BASE_URL ?>services/stepdeck" class="flex items-center gap-3">
-<i class="fa-solid fa-road"></i> Stepdeck
-</a>
-
-<a href="<?= BASE_URL ?>services/wideload" class="flex items-center gap-3">
-<i class="fa-solid fa-arrows-left-right"></i> Wide Load
-</a>
-
-<a href="<?= BASE_URL ?>services/reefer" class="flex items-center gap-3">
-<i class="fa-solid fa-snowflake"></i> Reefer
-</a>
-
+  </div>
 </div>
-
-<!-- RESOURCES -->
-<button id="mobileResourcesBtn" class="flex justify-between items-center w-full">
-<span class="flex items-center gap-3">
-<i class="fa-solid fa-folder-open"></i> Resources
-</span>
-<i id="mobileResourcesIcon" class="fa fa-chevron-down transition-transform"></i>
-</button>
-
-<div id="mobileResourcesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all flex flex-col ml-6 gap-3">
-
-<a href="<?= BASE_URL ?>safety" class="flex items-center gap-3">
-<i class="fa-solid fa-shield-halved"></i> Compliance
-</a>
-
-<a href="https://www.verizonconnect.com/" target="_blank" class="flex items-center gap-3">
-<i class="fa-solid fa-location-dot"></i> Tracking
-</a>
-
-</div>
-
-<!-- EMPLOYMENT (UNCHANGED as requested) -->
-<a href="<?= BASE_URL ?>forms/driver-application.php" class="flex items-center gap-3">
-<i class="fa-solid fa-briefcase"></i> Employment
-</a>
-
-<!-- CONTACT -->
-<a href="<?= BASE_URL ?>contact" class="flex items-center gap-3">
-<i class="fa-solid fa-envelope"></i> Contact Us
-</a>
-
-<!-- CTA -->
-<a href="<?= BASE_URL ?>contact" class="bg-red-600 text-white px-5 py-2 rounded-full text-center mt-auto">
-Request Quote
-</a>
-
-</div>
-
-</div>
-
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
+// MOBILE MENU TOGGLE
 const menuBtn = document.getElementById('menuBtn');
 const closeMenu = document.getElementById('closeMenu');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -258,36 +191,85 @@ menuBtn.onclick = () => {
   mobileMenu.classList.remove('translate-x-full');
   mobileOverlay.classList.remove('hidden');
 };
-
 closeMenu.onclick = () => {
   mobileMenu.classList.add('translate-x-full');
   mobileOverlay.classList.add('hidden');
 };
-
 mobileOverlay.onclick = closeMenu.onclick;
 
-// SERVICES DROPDOWN
-const servicesBtn = document.getElementById('mobileServicesBtn');
-const servicesMenu = document.getElementById('mobileServicesMenu');
-const servicesIcon = document.getElementById('mobileServicesIcon');
+// MOBILE SERVICES ACCORDION (AUTO HEIGHT)
+const servicesBtnMobile = document.getElementById('mobileServicesBtn');
+const servicesMenuMobile = document.getElementById('mobileServicesMenu');
+const servicesIconMobile = document.getElementById('mobileServicesIcon');
 
-servicesBtn.onclick = () => {
-  servicesMenu.classList.toggle('max-h-0');
-  servicesMenu.classList.toggle('max-h-96');
-  servicesMenu.classList.toggle('opacity-0');
-  servicesIcon.classList.toggle('rotate-180');
+servicesBtnMobile.onclick = () => {
+  if (servicesMenuMobile.style.maxHeight && servicesMenuMobile.style.maxHeight !== "0px") {
+    servicesMenuMobile.style.maxHeight = "0px";
+    servicesMenuMobile.style.opacity = "0";
+  } else {
+    servicesMenuMobile.style.maxHeight = servicesMenuMobile.scrollHeight + "px";
+    servicesMenuMobile.style.opacity = "1";
+  }
+  servicesIconMobile.classList.toggle('rotate-180');
 };
 
-// RESOURCES DROPDOWN
-const resourcesBtn = document.getElementById('mobileResourcesBtn');
-const resourcesMenu = document.getElementById('mobileResourcesMenu');
-const resourcesIcon = document.getElementById('mobileResourcesIcon');
+// DESKTOP MEGA MENU
+const servicesBtn = document.getElementById('servicesBtn');
+const megaMenu = document.getElementById('megaMenu');
 
-resourcesBtn.onclick = () => {
-  resourcesMenu.classList.toggle('max-h-0');
-  resourcesMenu.classList.toggle('max-h-96');
-  resourcesMenu.classList.toggle('opacity-0');
-  resourcesIcon.classList.toggle('rotate-180');
-};
+servicesBtn.addEventListener('mouseenter', () => megaMenu.classList.remove('hidden'));
+servicesBtn.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!megaMenu.matches(':hover')) megaMenu.classList.add('hidden');
+  }, 100);
+});
+megaMenu.addEventListener('mouseenter', () => megaMenu.classList.remove('hidden'));
+megaMenu.addEventListener('mouseleave', () => megaMenu.classList.add('hidden'));
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const statusText = document.getElementById("liveStatus");
+  const statusDot = document.getElementById("statusDot");
+
+  function updateStatus(){
+
+    // Get Kenya time
+    const now = new Date().toLocaleString("en-US", {
+      timeZone: "Africa/Nairobi"
+    });
+
+    const current = new Date(now);
+
+    const day = current.getDay(); // 0 = Sunday
+    const hour = current.getHours();
+
+    // Business hours: Mon-Sat (1–6), 8AM–6PM
+    const isOpenDay = day >= 1 && day <= 6;
+    const isOpenHour = hour >= 8 && hour < 18;
+
+    if(isOpenDay && isOpenHour){
+      // OPEN
+      statusText.textContent = "Open Now";
+      statusText.className = "font-semibold text-green-400";
+
+      statusDot.className = "w-3 h-3 rounded-full bg-green-500 inline-block animate-pulse";
+    } else {
+      // CLOSED
+      statusText.textContent = "Closed";
+      statusText.className = "font-semibold text-red-400";
+
+      statusDot.className = "w-3 h-3 rounded-full bg-red-500 inline-block";
+    }
+
+  }
+
+  // Run immediately
+  updateStatus();
+
+  // Update every minute
+  setInterval(updateStatus, 60000);
+
+});
+</script>
