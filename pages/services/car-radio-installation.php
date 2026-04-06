@@ -141,7 +141,7 @@ include BASE_PATH . 'includes/header.php';
         </a>.
       </p>
 
-      <a href="<?= BASE_URL ?>contact"
+        <a href="<?= BASE_URL ?>pages/contact.php"
          class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition">
         Get Car Radio Installed →
       </a> 

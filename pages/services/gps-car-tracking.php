@@ -129,7 +129,7 @@ All installations include professional setup and a warranty.
         GPS tracking technology helps prevent theft, recover stolen vehicles, enhance driver safety, 
         and improve operational efficiency for both personal and commercial fleets.
       </p>
-      <a href="<?= BASE_URL ?>contact"
+        <a href="<?= BASE_URL ?>pages/contact.php"
 class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition">
 
 Get GPS Tracking Now →

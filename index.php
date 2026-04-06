@@ -1,7 +1,13 @@
 <?php
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/config.php'; // ✅ LOAD FIRST
 
-// FIXED include
+$pageTitle = "Automotive Locksmith Nairobi | Car Key Replacement, Programming & GPS Tracking";
+$pageDescription = "Cartronique System offers car key replacement, key programming, key cutting, GPS tracking, ignition repair and emergency locksmith services in Nairobi. Open Monday to Sunday.";
+$pageKeywords = "car key replacement Nairobi, automotive locksmith Nairobi, key programming Kenya, ignition repair Nairobi, GPS tracking Kenya";
+
+// ✅ NOW it works
+$preloadImage = BASE_URL . "assets/images/key-programming.jpg";
+
 require_once BASE_PATH . 'includes/header.php';
 ?>
 
@@ -11,8 +17,10 @@ require_once BASE_PATH . 'includes/header.php';
     <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]">
 
       <img id="slideA"
-        class="absolute inset-0 w-full h-full object-cover object-center scale-110 transition-all duration-[2000ms] ease-linear"
-        alt="Automotive Locksmith Service Nairobi">
+  src="<?= BASE_URL ?>assets/images/key-programming.jpg"
+  class="absolute inset-0 w-full h-full object-cover object-center scale-110 transition-all duration-[2000ms] ease-linear"
+  alt="Car Key Replacement Nairobi"
+  fetchpriority="high">
 
       <div class="absolute inset-0 bg-black/40"></div>
 
@@ -62,7 +70,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Car Key Replacement</h2>
         <p class="text-gray-700 mb-3">Lost your car key? Fast mobile replacement services anywhere in Nairobi.</p>
-        <a href="<?= BASE_URL ?>services/key-replacement" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Replace Key 🔑</a>
+        <a href="<?= BASE_URL ?>pages/services/key-replacement.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Replace Key 🔑</a>
       </div>
 
       <!-- 2 -->
@@ -72,7 +80,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Key Programming</h2>
         <p class="text-gray-700 mb-3">Professional ECU, immobilizer, and smart key programming services.</p>
-        <a href="<?= BASE_URL ?>services/key-programming" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Program Key 💻</a>
+        <a href="<?= BASE_URL ?>pages/services/key-programming.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Program Key 💻</a>
       </div>
 
       <!-- 3 -->
@@ -82,7 +90,8 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Key Cutting</h2>
         <p class="text-gray-700 mb-3">Accurate key duplication for all car brands and models.</p>
-        <a href="<?= BASE_URL ?>services/key-cutting" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Duplicate Key 🔑</a>
+        
+      <a href="<?= BASE_URL ?>pages/services/key-cutting.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Duplicate Key </a>
       </div>
 
       <!-- 4 -->
@@ -92,7 +101,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">GPS Car Tracking</h2>
         <p class="text-gray-700 mb-3">Real-time GPS tracking systems for vehicle security and monitoring.</p>
-        <a href="<?= BASE_URL ?>services/gps-car-tracking" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install GPS 📍</a>
+        <a href="<?= BASE_URL ?>pages/services/gps-car-tracking.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install GPS 📍</a>
       </div>
 
       <!-- 5 -->
@@ -102,7 +111,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Car Radio Unlocking & Installation</h2>
         <p class="text-gray-700 mb-3">Unlock, repair, or install modern car radio and infotainment systems.</p>
-        <a href="<?= BASE_URL ?>services/car-radio-installation" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Radio 📻</a>
+        <a href="<?= BASE_URL ?>pages/services/car-radio-installation.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Radio 📻</a>
       </div>
 
       <!-- 6 -->
@@ -112,7 +121,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Electronic Steering Lock (ESL)</h2>
         <p class="text-gray-700 mb-3">Repair and replacement of faulty electronic steering lock systems.</p>
-        <a href="<?= BASE_URL ?>services/electronic-steering-lock" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix ESL 🔒</a>
+        <a href="<?= BASE_URL ?>pages/services/electronic-steering-lock.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix ESL 🔒</a>
       </div>
 
       <!-- 7 -->
@@ -122,7 +131,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">EGR & DPF Delete</h2>
         <p class="text-gray-700 mb-3">Improve engine performance with professional EGR and DPF delete services.</p>
-        <a href="<?= BASE_URL ?>services/egr-dpf-delete" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Optimize Engine ⚙️</a>
+        <a href="<?= BASE_URL ?>pages/services/egr-dpf-delete.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Optimize Engine ⚙️</a>
       </div>
 
       <!-- 8 -->
@@ -132,7 +141,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Car Alarm System</h2>
         <p class="text-gray-700 mb-3">Advanced anti-theft alarm systems installation for vehicle protection.</p>
-        <a href="<?= BASE_URL ?>services/car-alarm-system" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install Alarm 🚨</a>
+        <a href="<?= BASE_URL ?>pages/services/car-alarm-system.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install Alarm 🚨</a>
       </div>
 
       <!-- 9 -->
@@ -142,7 +151,7 @@ require_once BASE_PATH . 'includes/header.php';
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Ignition Repair</h2>
         <p class="text-gray-700 mb-3">Fix ignition switch problems and restore reliable vehicle starting.</p>
-        <a href="<?= BASE_URL ?>services/ignition-repair" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Ignition 🔧</a>
+       <a href="<?= BASE_URL ?>pages/services/ignition-repair.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Ignition 🔧</a>
       </div>
 
     </div>

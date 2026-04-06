@@ -229,7 +229,7 @@ We offer OEM-level ECU diagnostics, programming, flashing, and module configurat
 
 </ul>
 
-<a href="<?= BASE_URL ?>contact"
+  <a href="<?= BASE_URL ?>pages/contact.php"
 class="inline-block mt-6 bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full font-semibold">
 Book ECU Programming
 </a>
@@ -334,8 +334,6 @@ of the cost.
 
 </div>
 
-
-
 </div>
 
 
@@ -366,7 +364,7 @@ Secure Your Vehicle Today
 Get professional car key programming, smart key synchronization, lost key replacement, and immobilizer reset anywhere in Kenya.
 </p>
 
-<a href="<?= BASE_URL ?>contact"
+  <a href="<?= BASE_URL ?>pages/contact.php"
 class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-full font-semibold">
 Request Service
 </a>

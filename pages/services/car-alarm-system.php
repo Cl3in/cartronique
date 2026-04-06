@@ -114,7 +114,7 @@ include BASE_PATH . 'includes/header.php';
         <img src="<?= BASE_URL ?>assets/images/prestige.jpg" alt="Prestige Car Alarm" class="rounded-lg mb-3 h-40 w-full object-cover">
         <h3 class="text-xl font-bold text-red-600 mb-2">Prestige Car Alarms</h3>
         <p class="text-gray-700 text-sm mb-3">Reliable, cost-effective systems with immobilizer functionality and remote control operation.</p>
-        <a href="<?= BASE_URL ?>contact" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+          <a href="<?= BASE_URL ?>pages/contact.php" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
       </div>
 
       <!-- Autowatch -->
@@ -122,7 +122,7 @@ include BASE_PATH . 'includes/header.php';
         <img src="<?= BASE_URL ?>assets/images/auto.jpg" alt="Autowatch Car Alarm" class="rounded-lg mb-3 h-40 w-full object-cover">
         <h3 class="text-xl font-bold text-red-600 mb-2">Autowatch Car Alarm Systems</h3>
         <p class="text-gray-700 text-sm mb-3">Premium, smartphone-enabled systems with advanced encryption and remote management.</p>
-        <a href="<?= BASE_URL ?>contact" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+          <a href="<?= BASE_URL ?>pages/contact.php"class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
       </div>
 
       <!-- OEM & Aftermarket -->
@@ -130,7 +130,7 @@ include BASE_PATH . 'includes/header.php';
         <img src="<?= BASE_URL ?>assets/images/aftermarket.jpeg" alt="OEM and Aftermarket Alarms" class="rounded-lg mb-3 h-40 w-full object-cover">
         <h3 class="text-xl font-bold text-red-600 mb-2">OEM & Aftermarket Alarms</h3>
         <p class="text-gray-700 text-sm mb-3">We fit factory-equivalent and aftermarket systems depending on your requirements and budget.</p>
-        <a href="<?= BASE_URL ?>contact" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+          <a href="<?= BASE_URL ?>pages/contact.php" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
       </div>
 
       <!-- Smart Alarms -->
@@ -138,7 +138,7 @@ include BASE_PATH . 'includes/header.php';
         <img src="<?= BASE_URL ?>assets/images/salarm.jpg" alt="Smart Alarms With Mobile Alerts" class="rounded-lg mb-3 h-40 w-full object-cover">
         <h3 class="text-xl font-bold text-red-600 mb-2">Smart Alarms with Mobile Alerts</h3>
         <p class="text-gray-700 text-sm mb-3">Receive push notifications, remote immobilize options, and GPS integration for immediate action.</p>
-        <a href="<?= BASE_URL ?>contact" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+          <a href="<?= BASE_URL ?>pages/contact.php" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
       </div>
 
     </div>
@@ -172,7 +172,7 @@ include BASE_PATH . 'includes/header.php';
           <div class="cas-access-price text-gray-900 text-sm mb-2">
             Installation inclusive: <strong>Ksh 6,000</strong>
           </div>
-          <a href="<?= BASE_URL ?>contact" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+            <a href="<?= BASE_URL ?>pages/contact.php" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
         </div>
       </article>
 
@@ -185,7 +185,7 @@ include BASE_PATH . 'includes/header.php';
           <div class="cas-access-price text-gray-900 text-sm mb-2">
             Installation inclusive: <strong>Ksh 1,500</strong>
           </div>
-          <a href="<?= BASE_URL ?>contact" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+            <a href="<?= BASE_URL ?>pages/contact.php" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
         </div>
       </article>
 
@@ -198,7 +198,7 @@ include BASE_PATH . 'includes/header.php';
           <div class="cas-access-price text-gray-900 text-sm mb-2">
             Installation inclusive: <strong>Ksh 6,500</strong>
           </div>
-          <a href="<?= BASE_URL ?>contact" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+            <a href="<?= BASE_URL ?>pages/contact.php" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
         </div>
       </article>
 
@@ -211,7 +211,7 @@ include BASE_PATH . 'includes/header.php';
           <div class="cas-access-price text-gray-900 text-sm mb-2">
             Installation inclusive: <strong>Ksh 4,500</strong>
           </div>
-          <a href="<?= BASE_URL ?>contact" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
+            <a href="<?= BASE_URL ?>pages/contact.php" class="cas-btn inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">GET ONE</a>
         </div>
       </article>
 

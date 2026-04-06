@@ -1,37 +1,111 @@
 <?php 
 require_once __DIR__ . '/config.php';
 
-// Dynamic URL for canonical & OG
+// Dynamic URL
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-
 $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-// Dynamic title (fallback)
-$pageTitle = $pageTitle ?? "Cartronique Automotive Locksmith";
+// Dynamic SEO variables (fallbacks)
+$pageTitle = $pageTitle ?? "Automotive Locksmith Nairobi | Car Key Replacement & Programming | Cartronique System";
+$pageDescription = $pageDescription ?? "Cartronique System provides car key replacement, key programming, key cutting, GPS car tracking, ignition repair, car alarm installation, ESL repair, EGR & DPF delete and emergency locksmith services in Nairobi, Kenya. Open Monday to Sunday.";
+$pageKeywords = $pageKeywords ?? "automotive locksmith Nairobi, car key replacement Nairobi, key programming Kenya, ignition repair Nairobi, GPS car tracking Kenya, emergency locksmith Nairobi, car alarm installation Nairobi";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
-<title><?= $pageTitle ?> | <?= SITE_NAME ?></title>
-<meta name="description" content="Cartronique Automotive Locksmith provides expert car key programming, replacement, key cutting, GPS tracking, ignition repair, car alarm installation, and more in Nairobi, Kenya.">
-<meta name="keywords" content="car locksmith, key programming, key replacement, key cutting, car GPS tracking, ignition repair, car alarm system, electronic steering lock">
-<meta name="author" content="<?= SITE_NAME ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><?= htmlspecialchars($pageTitle) ?></title>
+
+<meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
+<meta name="keywords" content="<?= htmlspecialchars($pageKeywords) ?>">
+
+<meta name="author" content="Cartronique System">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="<?= $currentUrl ?>">
+
+<!-- Canonical -->
+<link rel="canonical" href="<?= htmlspecialchars($currentUrl) ?>">
+
+<!-- GEO -->
+<meta name="geo.region" content="KE-30">
+<meta name="geo.placename" content="Nairobi">
+<meta name="geo.position" content="-1.286061;36.804776">
+<meta name="ICBM" content="-1.286061, 36.804776">
+
+<!-- Open Graph -->
+<meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
+<meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<?= htmlspecialchars($currentUrl) ?>">
+<meta property="og:image" content="https://cartroniquesystem.co.ke/assets/images/key-programming.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>">
+<meta name="twitter:description" content="<?= htmlspecialchars($pageDescription) ?>">
+<meta name="twitter:image" content="https://cartroniquesystem.co.ke/assets/images/key-programming.jpg">
+
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="<?= BASE_URL ?>assets/images/favicon.png">
 
-<!-- Tailwind -->
+<!-- Speed -->
+<link rel="preload" as="image" href="<?= BASE_URL ?>assets/images/key-programming.jpg">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Cartronique System",
+  "url": "https://cartroniquesystem.co.ke/",
+  "telephone": "+254792776196",
+  "email": "cartroniquesystem@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kesuita Square, Kilimani, Near Dennis Pritt Road",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -1.286061,
+    "longitude": 36.804776
+  },
+  "areaServed": "Kenya",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "makesOffer": [
+    { "@type": "Service", "name": "Car Key Replacement" },
+    { "@type": "Service", "name": "Key Programming" },
+    { "@type": "Service", "name": "Key Cutting" },
+    { "@type": "Service", "name": "GPS Car Tracking" },
+    { "@type": "Service", "name": "Car Radio Unlocking & Installation" },
+    { "@type": "Service", "name": "Electronic Steering Lock Repair" },
+    { "@type": "Service", "name": "EGR and DPF Delete" },
+    { "@type": "Service", "name": "Car Alarm System Installation" },
+    { "@type": "Service", "name": "Ignition Repair" }
+  ]
+}
+</script>
+
+<!-- Styles -->
 <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-<!-- Main CSS -->
 <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/main.css">
+
+<?php if (!empty($preloadImage)): ?>
+<link rel="preload" as="image" href="<?= $preloadImage ?>">
+<?php endif; ?>
+
 </head>
 
 <body class="bg-[#141414] text-black">
