@@ -186,38 +186,71 @@ We install ESL emulators to bypass faulty steering locks while maintaining ECU c
 
 <!-- ================= FAQ ================= -->
 <section class="py-20 bg-gray-50">
-<div class="max-w-4xl mx-auto px-6">
+  <div class="max-w-4xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-10 text-red-600">
-Frequently Asked Questions
-</h2>
+    <h2 class="text-4xl font-bold text-center mb-12 text-red-600">
+      Frequently Asked Questions
+    </h2>
 
-<div class="space-y-6">
+    <div id="faqContainer" class="space-y-4">
 
-<div>
-<h3 class="font-bold">What is an ESL?</h3>
-<p class="text-gray-700">Electronic Steering Lock prevents unauthorized driving by locking the steering system electronically.</p>
-</div>
+      <!-- FAQ Item 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden faq-item">
+        <button class="w-full flex justify-between items-center p-6 cursor-pointer faq-btn">
+          <span class="text-lg font-semibold text-gray-800">
+            What is an ESL (Electronic Steering Lock)?
+          </span>
+          <i class="fa-solid fa-plus text-gray-400 text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300 faq-content">
+          The <strong>Electronic Steering Lock (ESL)</strong> prevents unauthorized driving by electronically locking the steering system. It integrates seamlessly with your car’s ignition and key system, enhancing vehicle security.
+        </div>
+      </div>
 
-<div>
-<h3 class="font-bold">Signs of ESL failure?</h3>
-<p class="text-gray-700">Steering lock, warning lights, or car not starting.</p>
-</div>
+      <!-- FAQ Item 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden faq-item">
+        <button class="w-full flex justify-between items-center p-6 cursor-pointer faq-btn">
+          <span class="text-lg font-semibold text-gray-800">
+            What are the signs of ESL failure?
+          </span>
+          <i class="fa-solid fa-plus text-gray-400 text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300 faq-content">
+          Common signs include a locked steering wheel, warning lights on the dashboard, difficulty starting the car, or intermittent system malfunctions. Early diagnosis is essential to prevent total lockout.
+        </div>
+      </div>
 
-<div>
-<h3 class="font-bold">Repair or replace?</h3>
-<p class="text-gray-700">Minor faults can be repaired, severe cases require replacement.</p>
-</div>
+      <!-- FAQ Item 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden faq-item">
+        <button class="w-full flex justify-between items-center p-6 cursor-pointer faq-btn">
+          <span class="text-lg font-semibold text-gray-800">
+            Should I repair or replace the ESL?
+          </span>
+          <i class="fa-solid fa-plus text-gray-400 text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300 faq-content">
+          Minor faults can often be repaired, but severe damage requires full replacement. Our professional technicians will diagnose your system and recommend the most reliable solution.
+        </div>
+      </div>
 
-<div>
-<h3 class="font-bold">Do you offer mobile service?</h3>
-<p class="text-gray-700">Yes, across Nairobi and nearby areas.</p>
-</div>
+      <!-- FAQ Item 4 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden faq-item">
+        <button class="w-full flex justify-between items-center p-6 cursor-pointer faq-btn">
+          <span class="text-lg font-semibold text-gray-800">
+            Do you offer mobile ESL repair services?
+          </span>
+          <i class="fa-solid fa-plus text-gray-400 text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300 faq-content">
+          Yes! We provide mobile ESL repair and replacement services across Nairobi and nearby areas, bringing professional solutions directly to your vehicle.
+        </div>
+      </div>
 
-</div>
-
-</div>
+    </div>
+  </div>
 </section>
+
+
 
 
 <!-- ================= CTA ================= -->
@@ -253,6 +286,34 @@ Contact Us →
    "url": "<?= BASE_URL ?>"
  }
 }
+</script>
+<!-- JavaScript Accordion -->
+<script>
+  const faqButtons = document.querySelectorAll('.faq-btn');
+
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('i');
+
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-content').forEach(other => {
+        if (other !== content) {
+          other.style.maxHeight = null;
+          other.previousElementSibling.querySelector('i').classList.remove('rotate-45');
+        }
+      });
+
+      // Toggle current FAQ
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.classList.remove('rotate-45');
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.classList.add('rotate-45');
+      }
+    });
+  });
 </script>
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>
