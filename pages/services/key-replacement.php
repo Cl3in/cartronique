@@ -29,20 +29,20 @@ include BASE_PATH . 'includes/header.php';
     
     <!-- Headline -->
     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-      Lost Your Car Key?
+      Lost Your Car Key? Don't Panic 
     </h1>
     
     <!-- Subtext -->
     <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 sm:mb-6 max-w-xl md:max-w-2xl">
-      Fast, professional mobile car key replacement and programming across Nairobi & Kenya. We handle smart keys, transponder keys, and traditional keys.
+      We Offer Fast, professional mobile car key replacement and programming in Nairobi & Across Kenya. We handle smart keys, transponder keys, and traditional keys.
     </p>
     
     <!-- Buttons -->
     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-      <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition">
+      <a href="<?= BASE_URL ?>pages/contact.php" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition">
         Get A Quote
       </a>
-      <a href="https://wa.me/254700000000" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition">
+      <a href="https://wa.me/254792776196" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition">
         WhatsApp Us
       </a>
     </div>
@@ -56,18 +56,41 @@ include BASE_PATH . 'includes/header.php';
     
 <!-- CARD 1 -->
 <div class="bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center gap-6 hover:scale-105 transition">
-  <div class="md:w-1/2 p-10"> <!-- increased padding -->
-    <h2 class="text-3xl font-bold mb-6">Fast & Reliable Key Replacement</h2> <!-- more margin -->
-    <p class="text-gray-700 mb-6">
-      Mobile car key replacement for all vehicle types, including smart keys, transponder keys, and push-to-start keys.
+  
+  <div class="md:w-1/2 p-10">
+    
+<h2 class="text-3xl font-bold text-red-700 mb-6">
+  Fast & Reliable Car Key Replacement in Nairobi
+</h2>
+
+    <p class="text-gray-700 mb-4">
+      Lost your car keys or dealing with a damaged key? <strong>Cartronique Automotive Locksmith</strong> provides 
+      professional <strong>car key replacement services in Nairobi, Kenya</strong> for all vehicle makes and models.
+      Our mobile automotive locksmith team can come directly to your location and cut and program a new key on-site.
     </p>
-    <a href="#" class="text-blue-600 font-semibold hover:underline">Get A Quote / WhatsApp Us</a>
+
+    <p class="text-gray-700 mb-4">
+      We specialize in <strong>smart key replacement, transponder key programming, remote key fobs, and push-to-start key systems</strong>.
+      Using advanced diagnostic tools, we ensure your new key is securely programmed to your vehicle’s ECU.
+    </p>
+
+    <p class="text-gray-700 mb-6">
+      Whether you have lost all keys, need a spare key, or require emergency roadside assistance, 
+      our experienced <strong>automotive locksmith technicians in Nairobi</strong> provide fast, affordable, and reliable service.
+    </p>
+
+    <a href="<?= BASE_URL ?>pages/contact.php" class="text-blue-600 font-semibold hover:underline">
+      Get A Quote / WhatsApp Us
+    </a>
+
   </div>
+
   <div class="md:w-1/2">
     <img src="<?= BASE_URL ?>assets/images/ford.jpg" 
-         alt="Car key programming and ECU coding services in Nairobi Kenya" 
-         class="rounded-xl shadow-lg w-full h-96 object-cover"> <!-- increased height from h-64 to h-96 -->
+         alt="Car key replacement and smart key programming service in Nairobi Kenya"
+         class="rounded-xl shadow-lg w-full h-96 object-cover">
   </div>
+
 </div>
 
     <!-- CARD 2 -->
@@ -84,7 +107,7 @@ include BASE_PATH . 'includes/header.php';
       <p class="text-gray-300 mb-6">
         We handle lost, broken, or malfunctioning keys for all vehicle types, including smart keys, remote keys, and traditional keys.
       </p>
-      <a href="#" class="text-blue-400 font-semibold hover:underline">Request Fast Key Replacement →</a>
+      <a href="<?= BASE_URL ?>pages/contact.php"text-blue-400 font-semibold hover:underline">Request Fast Key Replacement →</a>
     </div>
   </div>
 
@@ -95,7 +118,7 @@ include BASE_PATH . 'includes/header.php';
       <p class="text-gray-300 mb-6">
         We bring key cutting, programming, and replacement directly to your location,home, office, or roadside.
       </p>
-      <a href="#" class="text-blue-400 font-semibold hover:underline">Contact Us Now</a>
+     <a href="<?= BASE_URL ?>pages/contact.php"class="text-blue-400 font-semibold hover:underline">Contact Us Now</a>
     </div>
     <div class="md:w-1/2">
       <img src="<?= BASE_URL ?>assets/images/silicon.webp" alt="Mobile car key replacement in Nairobi Kenya" class="rounded-xl shadow-lg w-full h-96 object-cover">
@@ -119,7 +142,7 @@ include BASE_PATH . 'includes/header.php';
     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 sm:gap-6 items-center justify-items-center">
       <img src="<?= BASE_URL ?>assets/images/logos/toyota-logo.png" alt="Toyota" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/lexus-logo.png" alt="Lexus" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
-      <img src="<?= BASE_URL ?>assets/images/logos/nissan-logo.png" alt="Nissan" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
+      <img src="<?= BASE_URL ?>assets/images/logos/nissan.png" alt="Nissan" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/honda-logo.png" alt="Honda" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/mazda-logo.png" alt="Mazda" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/mercedes-benz-logo.png" alt="Mercedes" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
@@ -129,8 +152,8 @@ include BASE_PATH . 'includes/header.php';
       <img src="<?= BASE_URL ?>assets/images/logos/volvo-logo.png" alt="Volvo" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/ford-logo.png" alt="Ford" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/chevrolet-logo.png" alt="Chevrolet" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
-      <img src="<?= BASE_URL ?>assets/images/logos/dodge-logo.png" alt="Dodge" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
-      <img src="<?= BASE_URL ?>assets/images/logos/cadillac-logo.png" alt="Cadillac" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
+      <img src="<?= BASE_URL ?>assets/images/logos/jeep.png" alt="Dodge" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
+      <img src="<?= BASE_URL ?>assets/images/logos/cadilac.png" alt="Cadillac" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/hyundai-logo.png" alt="Hyundai" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/kia-logo.png" alt="Kia" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/byd-logo.png" alt="BYD" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
@@ -139,6 +162,9 @@ include BASE_PATH . 'includes/header.php';
       <img src="<?= BASE_URL ?>assets/images/logos/porsche-logo.png" alt="Porsche" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/land-rover-logo.png" alt="Land Rover" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
       <img src="<?= BASE_URL ?>assets/images/logos/bentley-logo.png" alt="Bentley" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
+     <img src="<?= BASE_URL ?>assets/images/logos/subaru.png" alt="Subaru" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
+     <img src="<?= BASE_URL ?>assets/images/logos/misubishi.png" alt="Mitsubishi" class="w-16 sm:w-20 md:w-24 h-auto object-contain">
+
     </div>
   </div>
 </section>

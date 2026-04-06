@@ -46,65 +46,97 @@ include BASE_PATH . 'includes/header.php';
 <div class="bg-black text-white">
 
 <!-- HERO -->
-<section class="py-16 bg-[#0d0d0d]"> 
+<section class="py-20 bg-white">
 
-  <div class="max-w-6xl mx-auto px-6">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
 
-    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10 grid md:grid-cols-2 gap-6 items-center">
 
-      <!-- TEXT -->
-      <div>
+<!-- IMAGE -->
+<div class="relative group overflow-hidden rounded-xl shadow-xl h-full">
 
-        <p class="text-yellow-500 uppercase tracking-widest text-xs mb-4 font-semibold">
-          Automotive Locksmith Services Kenya
-        </p>
+<a href="<?= BASE_URL ?>pages/contact.php" class="block h-full">
 
-        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-          Best in Car Key Programming & ECU Coding in Nairobi
-        </h1>
+<img src="<?= BASE_URL ?>assets/images/ford.jpg"
+alt="Professional car key programming and ECU coding services in Nairobi Kenya"
+class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
 
-        <p class="text-gray-700 text-sm leading-relaxed mb-3">
-          At <strong>Cartronique System</strong>, we specialize in professional
-          <strong>car key programming</strong>, <strong>ECU coding</strong>, and
-          <strong>immobilizer reset services</strong> for modern vehicles.
-          Our technicians use advanced diagnostic tools to program smart keys,
-          transponder keys, and remote fobs for most vehicle brands in Kenya.
-        </p>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
 
-        <p class="text-gray-700 text-sm leading-relaxed mb-3">
-          We program a wide range of car brands including Toyota, Nissan, Volkswagen (VW), BMW, Mercedes-Benz, Mazda, Ford, Audi, Honda, Hyundai, Lexus, Subaru, Land Rover, Jaguar, Mitsubishi, Peugeot, Renault, Kia, Suzuki, and many more. 
-          Whether you drive a luxury European car, Japanese vehicle, or American model, our expert team can handle your key programming and ECU coding needs efficiently in Nairobi and across Kenya.
-        </p>
+<span class="text-white text-3xl font-bold tracking-widest text-center px-4">
+KEY PROGRAMMING
+</span>
 
-        <p class="text-gray-700 text-sm leading-relaxed mb-3">
-          If you have lost your keys, we also provide
-          <a href="<?= BASE_URL ?>pages/services/key-replacement.php" class="text-red-600 hover:underline font-medium">
-          lost car key replacement
-          </a>
-          and
-          <a href="<?= BASE_URL ?>pages/services/key-cutting.php" class="text-red-600 hover:underline font-medium">
-          car key cutting
-          </a>
-          services anywhere in Nairobi. Our mobile locksmith team can come to your location quickly.
-        </p>
+</div>
 
-        <a href="<?= BASE_URL ?>pages/contact.php"
-        class="inline-block bg-red-600 hover:bg-red-700 text-white text-sm px-6 py-2 rounded-full font-semibold transition">
-        Request a Quote
-        </a>
+</a>
 
-      </div>
+</div>
 
-      <!-- IMAGE -->
-      <div>
-        <img src="<?= BASE_URL ?>assets/images/ford.jpg"
-        alt="Car key programming and ECU coding services in Nairobi Kenya"
-        class="rounded-xl shadow-lg w-full h-64 object-cover">
-      </div>
 
-    </div>
 
-  </div>
+<!-- TEXT -->
+<div class="flex flex-col justify-center">
+
+<p class="text-yellow-500 uppercase tracking-widest text-xs mb-4 font-semibold">
+Automotive Locksmith Services Nairobi Kenya
+</p>
+
+<h1 class="text-4xl font-bold mb-6 text-gray-900">
+Expert Car Key Programming & ECU Coding in Nairobi
+</h1>
+
+<p class="text-gray-700 mb-6 leading-relaxed">
+At <strong>Cartronique System</strong>, we provide professional 
+<strong>car key programming in Nairobi</strong>, advanced 
+<strong>ECU coding</strong>, and reliable 
+<strong>immobilizer reset services</strong> for modern vehicles. 
+Our experienced automotive locksmith technicians use professional diagnostic tools to program 
+smart keys, proximity keys, transponder keys, and remote key fobs for many vehicle brands in Kenya.
+</p>
+
+<p class="text-gray-700 mb-6 leading-relaxed">
+If your vehicle refuses to start due to an immobilizer issue or faulty chip key, we also offer 
+<a href="<?= BASE_URL ?>pages/services/key-replacement.php" class="text-red-600 font-semibold hover:underline">
+lost car key replacement
+</a>
+and professional 
+<a href="<?= BASE_URL ?>pages/services/key-cutting.php" class="text-red-600 font-semibold hover:underline">
+car key cutting
+</a>
+services anywhere in Nairobi.
+</p>
+
+<p class="text-gray-700 mb-6 leading-relaxed">
+Our mobile locksmith team can come directly to your location and program your key on-site. 
+For extra security, we also install 
+<a href="<?= BASE_URL ?>pages/services/car-alarm-system.php" class="text-red-600 font-semibold hover:underline">
+car alarm systems
+</a>
+and reliable 
+<a href="<?= BASE_URL ?>pages/services/gps-car-tracking.php" class="text-red-600 font-semibold hover:underline">
+GPS car tracking devices
+</a>
+to help protect your vehicle from theft.
+</p>
+
+<p class="text-gray-700 mb-8 leading-relaxed">
+If your ignition system is also failing, we provide professional 
+<a href="<?= BASE_URL ?>pages/services/ignition-repair.php" class="text-red-600 font-semibold hover:underline">
+car ignition repair and replacement
+</a>
+services to restore your vehicle's full functionality.
+</p>
+
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition">
+
+Book Key Programming Service →
+
+</a>
+
+</div>
+
+</div>
 
 </section>
 
@@ -243,31 +275,76 @@ Our Previous Work
 
 
 <!-- COST GUIDE -->
-<section class="py-24 bg-[#0d0d0d]">
+<section class="py-24 bg-white">
 
-<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
+<!-- TEXT -->
 <div>
 
-<h2 class="text-4xl font-bold mb-6">
-Car Key Programming Cost in Kenya
+<p class="text-yellow-500 uppercase tracking-widest text-xs mb-4 font-semibold">
+Automotive Locksmith Pricing Guide
+</p>
+
+<h2 class="text-4xl font-bold text-gray-900 mb-6">
+Car Key Programming Cost in Nairobi, Kenya
 </h2>
 
-<ul class="text-gray-300 space-y-2">
+<p class="text-gray-700 mb-6 leading-relaxed">
+The cost of <strong>car key programming in Nairobi</strong> varies depending on the vehicle model, 
+key technology, and the complexity of the immobilizer system. At 
+<strong>Cartronique System</strong>, we provide affordable and transparent pricing for 
+<strong>transponder keys, smart keys, ECU coding, and immobilizer programming</strong> 
+for most car brands in Kenya.
+</p>
 
-<li>Standard key duplication: KSh 1,500 – 5,500</li>
-<li>Transponder key programming: KSh 5,000 – 8,500</li>
-<li>Smart key programming: KSh 6,000 – 45,000</li>
-<li>ECU coding: KSh 20,000 – 45,000</li>
+<p class="text-gray-700 mb-6 leading-relaxed">
+Whether you need a replacement key, remote key programming, or a complete 
+immobilizer reset, our experienced automotive locksmith technicians use 
+advanced diagnostic tools to deliver dealership-level services at a fraction 
+of the cost.
+</p>
+
+<!-- PRICE LIST -->
+<div class="bg-gray-50 border border-gray-100 rounded-xl p-6 mb-8">
+
+<ul class="space-y-3 text-gray-700">
+
+<li class="flex justify-between border-b pb-2">
+<span><strong>Standard car key duplication</strong></span>
+<span class="font-semibold">KSh 1,500 – 5,500</span>
+</li>
+
+<li class="flex justify-between border-b pb-2">
+<span><strong>Transponder key programming</strong></span>
+<span class="font-semibold">KSh 5,000 – 8,500</span>
+</li>
+
+<li class="flex justify-between border-b pb-2">
+<span><strong>Smart key / proximity key programming</strong></span>
+<span class="font-semibold">KSh 6,000 – 45,000</span>
+</li>
+
+<li class="flex justify-between">
+<span><strong>ECU coding & immobilizer reset</strong></span>
+<span class="font-semibold">KSh 20,000 – 45,000</span>
+</li>
 
 </ul>
 
 </div>
 
-<div>
+
+
+</div>
+
+
+<!-- IMAGE -->
+<div class="relative group overflow-hidden rounded-xl shadow-xl">
 
 <img src="<?= BASE_URL ?>assets/images/smart.webp"
-class="rounded-xl shadow-xl">
+alt="Smart car key programming and transponder key replacement Nairobi Kenya"
+class="w-full h-full object-cover transition duration-500 group-hover:scale-105 rounded-xl">
 
 </div>
 
@@ -305,7 +382,7 @@ Request Service
 <div class="max-w-7xl mx-auto px-6">
 
 <h2 class="text-4xl font-bold text-center mb-6">
-🔑 Car Key Accessories
+Car Key Accessories
 </h2>
 
 <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">

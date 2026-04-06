@@ -60,10 +60,21 @@ $pageTitle = $pageTitle ?? "Cartronique Automotive Locksmith";
     </div>
 
     <!-- HOURS -->
-    <div class="flex items-center gap-2 text-gray-400">
-      <i class="fa-solid fa-calendar-days"></i>
-      <span>Mon - Sat: 8AM – 6PM</span>
-    </div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-2 text-gray-400">
+
+  <!-- Working Hours -->
+  <div class="flex items-center gap-2 text-sm">
+    <i class="fa-solid fa-calendar-days"></i>
+    <span>Mon - Fri: 8AM – 6PM</span>
+  </div>
+
+  <!-- Location -->
+  <div class="flex items-center gap-2 text-sm">
+    <i class="fa-solid fa-location-dot text-red-600"></i>
+    <span>Kesuita Square, Kilimani</span>
+  </div>
+
+</div>
 
   </div>
 </div>
