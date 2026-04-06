@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/includes/config.php';
-include BASE_PATH . 'includes/header.php';
+
+// FIXED include
+require_once BASE_PATH . 'includes/header.php';
 ?>
 
 <!-- HERO SLIDER -->
@@ -41,12 +43,14 @@ include BASE_PATH . 'includes/header.php';
 <section class="py-16 bg-[#0B1E3A] text-black">
   <div class="max-w-7xl mx-auto px-6">
 
+    <!-- SEO IMPROVED HEADING -->
     <h1 class="text-4xl sm:text-5xl font-bold text-center mb-4 text-red-500">
-      Our Services 
+      Automotive Locksmith Services in Nairobi and Across Kenya
     </h1>
 
+    <!-- SEO IMPROVED DESCRIPTION -->
     <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12">
-      Car key replacement, key programming, ignition repair, GPS tracking, and advanced vehicle security solutions across Nairobi and surrounding areas.
+      Professional car key replacement, key programming, ignition repair, GPS tracking, emergency lockout services, and advanced vehicle security solutions in Nairobi and across Kenya.
     </p>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,171 +58,171 @@ include BASE_PATH . 'includes/header.php';
       <!-- 1 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/vw.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/vw.jpg" alt="Car Key Replacement Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Car Key Replacement</h2>
         <p class="text-gray-700 mb-3">Lost your car key? Fast mobile replacement services anywhere in Nairobi.</p>
-        <a href="<?= BASE_URL ?>services/key-replacement.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Replace Key 🔑</a>
+        <a href="<?= BASE_URL ?>services/key-replacement" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Replace Key 🔑</a>
       </div>
 
       <!-- 2 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/key-programming.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/key-programming.jpg" alt="Car Key Programming Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Key Programming</h2>
         <p class="text-gray-700 mb-3">Professional ECU, immobilizer, and smart key programming services.</p>
-        <a href="<?= BASE_URL ?>services/key-programming.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Program Key 💻</a>
+        <a href="<?= BASE_URL ?>services/key-programming" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Program Key 💻</a>
       </div>
 
       <!-- 3 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/key-cutting.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/key-cutting.jpg" alt="Car Key Cutting Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Key Cutting</h2>
         <p class="text-gray-700 mb-3">Accurate key duplication for all car brands and models.</p>
-        <a href="<?= BASE_URL ?>services/key-cutting.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Duplicate Key 🔑</a>
+        <a href="<?= BASE_URL ?>services/key-cutting" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Duplicate Key 🔑</a>
       </div>
 
       <!-- 4 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/GPS.webp" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/GPS.webp" alt="GPS Car Tracking Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">GPS Car Tracking</h2>
         <p class="text-gray-700 mb-3">Real-time GPS tracking systems for vehicle security and monitoring.</p>
-        <a href="<?= BASE_URL ?>services/gps-car-tracking.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install GPS 📍</a>
+        <a href="<?= BASE_URL ?>services/gps-car-tracking" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install GPS 📍</a>
       </div>
 
       <!-- 5 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/car-radio.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/car-radio.jpg" alt="Car Radio Installation Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Car Radio Unlocking & Installation</h2>
         <p class="text-gray-700 mb-3">Unlock, repair, or install modern car radio and infotainment systems.</p>
-        <a href="<?= BASE_URL ?>services/car-radio-installation.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Radio 📻</a>
+        <a href="<?= BASE_URL ?>services/car-radio-installation" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Radio 📻</a>
       </div>
 
       <!-- 6 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/MercedesESL.webp" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/MercedesESL.webp" alt="Electronic Steering Lock Repair Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Electronic Steering Lock (ESL)</h2>
         <p class="text-gray-700 mb-3">Repair and replacement of faulty electronic steering lock systems.</p>
-        <a href="<?= BASE_URL ?>services/electronic-steering-lock.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix ESL 🔒</a>
+        <a href="<?= BASE_URL ?>services/electronic-steering-lock" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix ESL 🔒</a>
       </div>
 
       <!-- 7 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/dpf-delete.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/dpf-delete.jpg" alt="EGR and DPF Delete Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">EGR & DPF Delete</h2>
         <p class="text-gray-700 mb-3">Improve engine performance with professional EGR and DPF delete services.</p>
-        <a href="<?= BASE_URL ?>services/egr-dpf-delete.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Optimize Engine ⚙️</a>
+        <a href="<?= BASE_URL ?>services/egr-dpf-delete" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Optimize Engine ⚙️</a>
       </div>
 
       <!-- 8 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/car-alarm.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/car-alarm.jpg" alt="Car Alarm Installation Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Car Alarm System</h2>
         <p class="text-gray-700 mb-3">Advanced anti-theft alarm systems installation for vehicle protection.</p>
-        <a href="<?= BASE_URL ?>services/car-alarm-system.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install Alarm 🚨</a>
+        <a href="<?= BASE_URL ?>services/car-alarm-system" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Install Alarm 🚨</a>
       </div>
 
       <!-- 9 -->
       <div class="bg-white border border-red-500 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
         <div class="w-full h-56 bg-gray-100 rounded-xl mb-4 flex items-center justify-center">
-          <img src="<?= BASE_URL ?>assets/images/ignition-repair.jpg" class="max-h-full max-w-full object-contain">
+          <img src="<?= BASE_URL ?>assets/images/ignition-repair.jpg" alt="Ignition Repair Nairobi" class="max-h-full max-w-full object-contain">
         </div>
         <h2 class="text-2xl font-bold text-red-500 mb-2">Ignition Repair</h2>
         <p class="text-gray-700 mb-3">Fix ignition switch problems and restore reliable vehicle starting.</p>
-        <a href="<?= BASE_URL ?>services/ignition-repair.php" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Ignition 🔧</a>
+        <a href="<?= BASE_URL ?>services/ignition-repair" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-black">Fix Ignition 🔧</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-10 bg-gradient-to-r from-red-600 to-red-700 text-white text-center mx-4 sm:mx-6 rounded-2xl">
-  <div class="max-w-2xl mx-auto px-4">
-
-    <h2 class="text-2xl sm:text-3xl font-bold mb-3">
-      Need Automotive Locksmith Help?
-    </h2>
-
-    <p class="text-sm sm:text-base mb-5 text-white/90">
-      Fast response across Nairobi. Lost keys, lockouts, ignition issues , we’ve got you covered.
-    </p>
-
-    <div class="flex flex-col sm:flex-row justify-center gap-3">
-
-      <!-- CALL -->
-      <a href="tel:+254792776196"
-         class="px-5 py-2 bg-black rounded-full font-semibold text-sm hover:bg-white hover:text-red-600 transition">
-         📞 Call Now
-      </a>
-
-      <!-- WHATSAPP -->
-      <a href="https://wa.me/254792776196"
-         class="px-5 py-2 bg-green-600 rounded-full font-semibold text-sm hover:bg-white hover:text-green-600 transition">
-         💬 WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section class="py-5 bg-black">
-  <div class="max-w-2xl mx-auto px-4">
-
-    <div class="bg-white border border-gray-100 rounded-xl shadow-md p-6 max-w-md mx-auto">
-
-      <!-- TITLE -->
-      <h2 class="text-lg font-bold text-gray-800 mb-2 text-center">
-        📍 Our Location
+<!-- SPLIT CTA -->
+<section class="py-10 mx-4 sm:mx-6">
+  <div class="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg grid md:grid-cols-2">
+    
+    <!-- LEFT: TEXT -->
+    <div class="bg-gradient-to-r from-red-600 to-red-700 text-white p-8 flex flex-col justify-center">
+      
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">
+        Emergency Lockout Services
       </h2>
 
-      <p class="text-sm text-gray-600 text-center mb-3">
-        Kesuita Square, Kilimani, Nairobi, Kenya<br>
-        Near Dennis Pritt Road
+      <p class="text-sm sm:text-base mb-5 text-white/90">
+        Locked out of your car? We provide fast and reliable emergency lockout services across Nairobi and its surrounding. Available 24/7 to get you back on the road quickly and safely.
       </p>
 
-      <!-- MAP -->
-      <div class="w-full h-48 rounded-lg overflow-hidden border">
-        <iframe
-          src="https://www.google.com/maps?q=Kesuita+Square,+Kilimani,+Nairobi,+Kenya&output=embed"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+      <div class="flex flex-col sm:flex-row gap-3">
+        
+        <a href="tel:+254792776196"
+           class="px-5 py-2 bg-black rounded-full font-semibold text-sm hover:bg-white hover:text-red-600 transition text-center">
+           📞 Call Now
+        </a>
 
-      <!-- BUTTON -->
-      <div class="text-center mt-3">
+        <a href="https://wa.me/254792776196"
+           class="px-5 py-2 bg-green-600 rounded-full font-semibold text-sm hover:bg-white hover:text-green-600 transition text-center">
+           💬 WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: IMAGE PLACEHOLDER -->
+    <div class="h-64 md:h-auto bg-gray-100 flex items-center justify-center">
+      <img src="<?= BASE_URL ?>assets/images/emergency-lockout.jpg"
+           alt="Emergency Lockout Service"
+           class="w-full h-full object-cover">
+    </div>
+
+  </div>
+</section>
+
+<section class="mt-12 max-w-5xl mx-auto px-4">
+  <!-- Section Title -->
+  <div class="text-center mb-4">
+    <h3 class="text-xl font-bold text-[#1E3A8A]">Our Location</h3>
+    <p class="text-gray-500 text-sm">Visit us in Kilimani, Nairobi</p>
+  </div>
+
+  <!-- Map Container -->
+  <div class="relative rounded-xl overflow-hidden shadow-lg">
+    <!-- Google Map -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.457108234331!2d36.80477637495077!3d-1.2860614358341854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10e1f14c1f4d%3A0xe3a2c9a2f1c44cf6!2sKesuita%20Square%2C%20Kilimani%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1689971234567!5m2!1sen!2ske" 
+      class="w-full h-60 md:h-72" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <!-- Red Location Icon -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full">
+      <i class="fa-solid fa-map-marker-alt text-red-600 text-3xl drop-shadow-lg"></i>
+    </div>
+  </div>
+
+  <!-- Open in Google Maps Button -->
+       <div class="text-center mt-3">
         <a href="https://www.google.com/maps?q=Kesuita+Square,+Kilimani,+Nairobi,+Kenya"
            target="_blank"
            class="inline-block px-4 py-2 bg-black text-white text-sm rounded-full hover:bg-red-600 transition">
           Open in Google Maps
         </a>
       </div>
-
-    </div>
-
-  </div>
 </section>
-
 <section class="py-14 bg-[#0B1E3A] text-white">
   <div class="max-w-7xl mx-auto px-6 text-center">
 
@@ -308,19 +312,101 @@ include BASE_PATH . 'includes/header.php';
   </div>
 </section>
 
-<!-- CAROUSEL SCRIPT -->
-<script id="carouselScript">
-  const carousel = document.getElementById("reviewCarousel");
-  let index = 0;
 
-  setInterval(() => {
-    index = (index + 1) % 3; // number of slides
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-  }, 5000);
+<section id="statsSection" class="py-8 bg-gray-100">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="bg-white shadow-lg rounded-xl p-6 grid grid-cols-1 md:grid-cols-3 text-center gap-6">
+
+      <!-- Happy Clients -->
+      <div>
+        <h3 class="text-3xl font-bold text-red-600 counter" data-target="3430">0</h3>
+        <p class="text-gray-600 text-sm mt-1">Happy Clients</p>
+      </div>
+
+      <!-- Cars Serviced -->
+      <div>
+        <h3 class="text-3xl font-bold text-red-600 counter" data-target="8980">0</h3>
+        <p class="text-gray-600 text-sm mt-1">Cars Serviced</p>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <h3 class="text-3xl font-bold text-red-600 counter" data-target="10">0</h3>
+        <p class="text-gray-600 text-sm mt-1">Years of Experience</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+const counters = document.querySelectorAll('.counter');
+let started = false;
+
+function startCounters(){
+
+  counters.forEach(counter => {
+
+    const updateCounter = () => {
+
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+
+      const increment = target / 200;
+
+      if(current < target){
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target.toLocaleString() + "+";
+      }
+
+    };
+
+    updateCounter();
+
+  });
+
+}
+
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting && !started){
+      startCounters();
+      started = true;
+    }
+
+  });
+
+},{ threshold: 0.5 });
+
+observer.observe(document.querySelector("#statsSection"));
+
+</script>
+
+<!-- CAROUSEL SCRIPT -->
+<script>
+const carousel = document.getElementById("reviewCarousel");
+let reviewIndex = 0;
+
+setInterval(() => {
+  reviewIndex = (reviewIndex + 1) % 3;
+  carousel.style.transform = `translateX(-${reviewIndex * 100}%)`;
+}, 5000);
 </script>
 <!-- SLIDER SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function(){
+
+let slideIndex = 0;
 
 const slides = [
     {

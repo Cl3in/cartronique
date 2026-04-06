@@ -3,227 +3,290 @@ require_once __DIR__ . '/../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
-<title>About Parrish Family Trucking | Reliable Freight & Trucking Company</title>
+<title>About Cartronique System | Automotive Locksmith Nairobi Kenya</title>
 
-<meta name="description" content="Learn about Parrish Family Trucking, a trusted freight and trucking company delivering safe, reliable transportation services across the United States.">
+<meta name="description" content="Learn about Cartronique System, Kenya's trusted automotive locksmith company providing car key replacement, programming, ignition repair, GPS tracking and vehicle security services.">
 
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://parrishft.com/about.php">
+<link rel="canonical" href="<?= BASE_URL ?>pages/about.php">
 
-<!-- ✅ SCHEMA: ORGANIZATION + LOCAL BUSINESS -->
+<!-- SCHEMA -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Parrish Family Trucking",
- "image": "https://parrishft.com/assets/images/logo.png",
- "url": "https://parrishft.com",
- "telephone": "+1-XXX-XXX-XXXX",
+ "@type": "AutomotiveBusiness",
+ "name": "Cartronique System",
+ "image": "<?= BASE_URL ?>assets/images/logo.png",
+ "url": "<?= BASE_URL ?>",
+ "telephone": "+254792776196",
+ "priceRange": "$$",
  "address": {
    "@type": "PostalAddress",
-   "addressLocality": "Chattanooga",
-   "addressRegion": "TN",
-   "addressCountry": "US"
+   "streetAddress": "Kesuita Square, Kilimani",
+   "addressLocality": "Nairobi",
+   "addressCountry": "Kenya"
  },
- "areaServed": "United States",
- "sameAs": []
+ "areaServed": {
+   "@type": "Place",
+   "name": "Kenya"
+ },
+ "sameAs": [
+   "https://www.facebook.com/",
+   "https://www.instagram.com/",
+   "https://www.tiktok.com/"
+ ]
 }
 </script>
 
-<!-- ABOUT INTRO -->
-<section class="py-20 bg-[#0A0A0A] text-white">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<!-- HERO -->
+<section class="py-20 bg-[#0B1E3A] text-white">
+  <div class="max-w-7xl mx-auto px-6 flex justify-center">
 
-    <div>
-      <h1 class="text-4xl font-extrabold mb-4">
-      About <span class="text-red-600">Parrish Family Trucking</span>
-      </h1>
+    <!-- Card -->
+    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-4xl">
+      
+      <!-- Card Text -->
+      <div class="p-8 md:w-1/2 flex flex-col justify-center space-y-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight text-gray-900">
+          Leaders in Professional 
+          <span class="text-red-500">Automotive Locksmith Services</span>
+        </h2>
+        <p class="text-gray-700 text-lg md:text-base">
+          Cartronique System is a trusted automotive locksmith company specializing in 
+          <a href="<?= BASE_URL ?>pages/services/car-key-replacement.php" class="text-red-500 hover:underline">car key replacement</a>, 
+          <a href="<?= BASE_URL ?>pages/services/key-programming.php" class="text-red-500 hover:underline">car key programming</a>, 
+          <a href="<?= BASE_URL ?>pages/services/ignition-repair.php" class="text-red-500 hover:underline">ignition repair</a>, 
+          and advanced vehicle security solutions in Nairobi and across Kenya.
+        </p>
+      </div>
+
+      <!-- Card Image -->
+      <div class="md:w-1/2">
+        <img src="<?= BASE_URL ?>assets/images/carkeyprograming.webp" 
+             class="w-full h-full object-cover"
+             alt="Automotive locksmith services Nairobi">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="py-20 bg-[#111111] text-white">
+  <div class="max-w-6xl mx-auto px-6 flex justify-center">
+
+    <!-- Black Card -->
+    <div class="bg-black rounded-2xl shadow-2xl w-full p-8 flex flex-col md:flex-row gap-8">
+
+      <!-- Left Column -->
+      <div class="md:w-1/2 flex flex-col justify-center space-y-4 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold text-red-500">
+          Who We Are
+        </h2>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Cartronique System is a trusted automotive locksmith company specializing in 
+          vehicle key replacement, smart key programming, ignition repair, and vehicle 
+          security solutions.
+        </p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="md:w-1/2 flex flex-col justify-center space-y-4 text-center md:text-left">
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Our mobile locksmith units are fully equipped with modern diagnostic tools, 
+          allowing us to solve vehicle key and security issues quickly and efficiently.
+        </p>
+        <p class="hidden">
+          Automotive locksmith Nairobi, car key replacement Nairobi, car key programming Kenya,
+          lost car key replacement, ignition repair Nairobi, transponder key programming,
+          car alarm installation Kenya, GPS car tracking Nairobi.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISION VALUES -->
+<section class="py-20 bg-[#0B1E3A] text-white">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+    <div class="bg-white text-black p-8 rounded-2xl shadow">
+
+      <h3 class="text-2xl font-bold mb-3 text-red-600">
+        🎯 Our Mission
+      </h3>
 
       <p>
-        <strong>Parrish Family Trucking</strong> is headquartered in Chattanooga, TN and
-        offers personalized and professional customer interactions,
-        <strong>on-time freight delivery</strong>, safe and secure transportation, and reasonable
-        rates. We streamline logistics services as we continue to grow to
-        meet the increasing needs of our customers while providing
-        <strong>professional truck drivers</strong>.
+        To provide fast, reliable, and affordable automotive locksmith solutions 
+        that restore peace of mind to vehicle owners across Kenya.
       </p>
 
-      <p class="text-lg text-gray-300 leading-relaxed mb-4">
-        Parrish Family Trucking (PFT) is a trusted <strong>freight carrier</strong> delivering safe,
-        dependable, and efficient <strong>trucking services</strong> across the United States.
-      </p>
-
-      <p class="text-lg text-gray-300 leading-relaxed">
-        Built on family values and long-standing industry relationships, we focus on
-        <strong>reliability, trust, and logistics performance</strong> — mile after mile.
-      </p>
     </div>
 
-    <div class="relative">
-      <img src="<?= BASE_URL ?>assets/images/stepdek1.webp"
-           class="rounded-2xl shadow-xl w-full object-cover"
-           alt="Freight trucking company operations">
-      <div class="absolute inset-0 rounded-2xl bg-black/30"></div>
+    <div class="bg-white text-black p-8 rounded-2xl shadow">
+
+      <h3 class="text-2xl font-bold mb-3 text-red-600">
+        👁️ Our Vision
+      </h3>
+
+      <p>
+        To become the leading automotive locksmith service provider in East Africa 
+        known for technical excellence, innovation, and customer satisfaction.
+      </p>
+
+    </div>
+
+    <div class="bg-white text-black p-8 rounded-2xl shadow">
+
+      <h3 class="text-2xl font-bold mb-3 text-red-600">
+        💼 Our Values
+      </h3>
+
+      <ul class="space-y-2">
+        <li><strong>Professionalism</strong> – Certified and trained technicians.</li>
+        <li><strong>Reliability</strong> – Fast response and dependable service.</li>
+        <li><strong>Transparency</strong> – Honest pricing with no hidden fees.</li>
+      </ul>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- MISSION & VALUES -->
-<section class="relative py-20 text-white overflow-hidden">
+<!-- WHAT SETS US APART -->
+<section class="py-20 bg-black text-white">
 
-  <div class="absolute inset-0">
-    <img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
-         alt="Truck fleet mission background"
-         class="w-full h-full object-cover">
-  </div>
+<div class="max-w-7xl mx-auto px-6">
 
-  <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+<h2 class="text-4xl font-bold text-center mb-14 text-red-500">
+What Sets Cartronique Apart
+</h2>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-8">
 
-    <h2 class="text-4xl font-extrabold text-center mb-12">
-      Mission & Core Values in <span class="text-red-500">Trucking Excellence</span>
-    </h2>
-
-    <div class="grid md:grid-cols-4 gap-8">
-
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <div class="text-4xl mb-4">🛡️</div>
-        <h3 class="text-xl font-bold mb-2 text-red-600">Safety First</h3>
-        <p class="text-gray-700">
-          Every decision we make prioritizes <strong>transportation safety</strong> for drivers and the public.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <div class="text-4xl mb-4">🤝</div>
-        <h3 class="text-xl font-bold mb-2 text-red-600">Integrity</h3>
-        <p class="text-gray-700">
-          Honest communication and accountability define our <strong>logistics operations</strong>.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <div class="text-4xl mb-4">🚚</div>
-        <h3 class="text-xl font-bold mb-2 text-red-600">Reliability</h3>
-        <p class="text-gray-700">
-          Consistent <strong>on-time delivery</strong> and dependable freight services.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <div class="text-4xl mb-4">📈</div>
-        <h3 class="text-xl font-bold mb-2 text-red-600">Excellence</h3>
-        <p class="text-gray-700">
-          Continuous improvement in <strong>fleet management</strong> and service quality.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP + SAFETY -->
-<section class="py-20 bg-[#181818] text-white">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-
-<section class="py-20 bg-[#181818] text-white">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-
-    <div class="mb-12 text-center">
-      <h2 class="text-3xl font-extrabold mb-4 text-red-600">Leadership Team</h2>
-<p class="block text-gray-300 leading-relaxed max-w-2xl mx-auto text-xl">
-  Our leadership team, built on a foundation of <strong>military experience</strong>, brings decades of <strong>transportation and logistics expertise</strong>, 
-  guiding operations with a focus on performance, compliance, and a people-first strategy.
+<div class="bg-white text-black p-8 rounded-2xl shadow">
+<h3 class="text-xl font-bold mb-3">🚙 Mobile Service</h3>
+<p>
+Our mobile automotive locksmith units come directly to you anywhere in Nairobi or surrounding areas.
 </p>
-    </div>
+</div>
 
-  </div>
+<div class="bg-white text-black p-8 rounded-2xl shadow">
+<h3 class="text-xl font-bold mb-3">💻 Modern Technology</h3>
+<p>
+We use advanced key programming and diagnostic equipment for modern vehicles.
+</p>
+</div>
+
+<div class="bg-white text-black p-8 rounded-2xl shadow">
+<h3 class="text-xl font-bold mb-3">⏱️ Fast Turnaround</h3>
+<p>
+Most vehicle key replacement and programming services are completed within hours.
+</p>
+</div>
+
+<div class="bg-white text-black p-8 rounded-2xl shadow">
+<h3 class="text-xl font-bold mb-3">🔐 Security Expertise</h3>
+<p>
+Our locksmiths are trained in modern automotive security systems.
+</p>
+</div>
+
+<div class="bg-white text-black p-8 rounded-2xl shadow">
+<h3 class="text-xl font-bold mb-3">💰 Transparent Pricing</h3>
+<p>
+Clear quotes before work begins with no hidden costs.
+</p>
+</div>
+
+<div class="bg-white text-black p-8 rounded-2xl shadow">
+<h3 class="text-xl font-bold mb-3">🌍 Kenya Coverage</h3>
+<p>
+Serving Nairobi, Kiambu, Machakos, Nakuru and other regions across Kenya.
+</p>
+</div>
+
+</div>
+
+</div>
 </section>
 
-    <div class="bg-white p-10 rounded-2xl shadow">
-      <h2 class="text-3xl font-extrabold mb-4 text-red-600">Safety Commitment</h2>
-      <p class="text-gray-700 leading-relaxed">
-        We maintain strict compliance with all regulations, invest in
-        <strong>driver safety training</strong>, and uphold rigorous maintenance standards to ensure
-        safe and efficient freight delivery.
-      </p>
-    </div>
+<!-- EXPERTISE -->
+<section class="py-20 bg-[#111111] text-white">
 
-  </div>
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+
+<div>
+
+<h2 class="text-3xl font-bold text-red-500 mb-4">
+Our Expertise
+</h2>
+
+<p class="text-gray-300 mb-4">
+We provide professional services for Japanese, European, American and Asian vehicle brands including:
+</p>
+
+<p class="text-gray-300">
+Toyota, Nissan, Subaru, Mercedes-Benz, BMW, Volkswagen and many more.
+</p>
+
+</div>
+
+<div>
+
+<h2 class="text-3xl font-bold text-red-500 mb-4">
+Emergency Response
+</h2>
+
+<p class="text-gray-300">
+Locked out of your car? Lost your keys? Our emergency automotive locksmith 
+team is available to assist you quickly.
+</p>
+
+<p class="text-gray-300 mt-4">
+We provide fast roadside assistance and mobile locksmith services across Nairobi.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CERTIFICATION -->
-<section class="py-20 bg-[#0A0A0A] text-white">
-  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<!-- CTA -->
+<section class="py-20 bg-white text-[#111111] text-center">
+  <div class="max-w-4xl mx-auto px-6">
 
-    <div>
-      <h2 class="text-4xl font-extrabold mb-4">
-        100% SDVOB Certified Trucking Company
+    <!-- Inner Card Container -->
+    <div class="bg-white rounded-2xl shadow-xl p-10">
+
+      <h2 class="text-3xl md:text-3xl font-bold mb-4">
+        Need Automotive Locksmith Assistance?
       </h2>
-      <p class="text-gray-300 text-lg leading-relaxed">
-        Parrish Family Trucking is a certified <strong>Service-Disabled Veteran-Owned Business</strong>,
-        reflecting our commitment to discipline, service, and <strong>transportation excellence</strong>.
+
+      <p class="mb-6 text-base md:text-lg">
+        Contact our <a href="<?= BASE_URL ?>pages/contact.php" class="text-red-600 hover:underline">
+        automotive locksmith team</a> today for fast roadside assistance in Nairobi.
       </p>
-    </div>
 
-  </div>
-</section>
+      <div class="flex justify-center gap-4 flex-wrap">
 
+        <a href="tel:+254792776196"
+           class="px-6 py-3 bg-black text-white rounded-full hover:bg-red-600 hover:text-white transition">
+           📞 Call Now
+        </a>
 
-<!-- OUR SERVICES (SEO INTERNAL LINKS) -->
-<section class="py-16 bg-[#111111] text-white">
-  <div class="max-w-6xl mx-auto px-6 text-center">
+        <a href="https://wa.me/254792776196"
+           class="px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-500 hover:text-white transition">
+           💬 WhatsApp
+        </a>
 
-    <h2 class="text-3xl font-bold mb-10 text-red-600">
-      Our Freight & Trucking Services
-    </h2>
-
-    <div class="grid md:grid-cols-4 gap-6">
-
-      <a href="<?= BASE_URL ?>pages/services/flatbed.php"
-         class="bg-white text-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition hover:scale-105 block">
-
-        <h3 class="text-xl font-bold mb-2">Flatbed Trucking</h3>
-        <p class="text-gray-600 text-sm">
-          Reliable <strong>flatbed freight services</strong> for oversized and heavy loads.
-        </p>
-
-      </a>
-
-      <a href="<?= BASE_URL ?>pages/services/reefer.php"
-         class="bg-white text-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition hover:scale-105 block">
-
-        <h3 class="text-xl font-bold mb-2">Reefer Transport</h3>
-        <p class="text-gray-600 text-sm">
-          Temperature-controlled <strong>reefer trucking</strong> for perishable goods.
-        </p>
-
-      </a>
-
-      <a href="<?= BASE_URL ?>pages/services/stepdeck.php"
-         class="bg-white text-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition hover:scale-105 block">
-
-        <h3 class="text-xl font-bold mb-2">Step Deck</h3>
-        <p class="text-gray-600 text-sm">
-          Efficient <strong>step deck hauling</strong> for tall freight and equipment.
-        </p>
-
-      </a>
-
-      <a href="<?= BASE_URL ?>pages/services/wideload.php"
-         class="bg-white text-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition hover:scale-105 block">
-
-        <h3 class="text-xl font-bold mb-2">Wide Load</h3>
-        <p class="text-gray-600 text-sm">
-          Specialized <strong>wide load transport</strong> with safety compliance.
-        </p>
-
-      </a>
+      </div>
 
     </div>
-
   </div>
 </section>
 

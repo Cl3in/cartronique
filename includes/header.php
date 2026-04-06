@@ -2,7 +2,9 @@
 require_once __DIR__ . '/config.php';
 
 // Dynamic URL for canonical & OG
-$currentUrl = "https://" . ($_SERVER['HTTP_HOST'] ?? 'localhost') . $_SERVER['REQUEST_URI'];
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+
+$currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 // Dynamic title (fallback)
 $pageTitle = $pageTitle ?? "Cartronique Automotive Locksmith";
@@ -74,62 +76,70 @@ $pageTitle = $pageTitle ?? "Cartronique Automotive Locksmith";
     <span class="text-black uppercase font-bold">CARTRONIQUE</span> 
     <span class="text-red-600 uppercase font-bold">SYSTEM</span>
   </a>
+<!-- DESKTOP NAV -->
+<nav class="hidden md:flex flex-1 justify-center gap-6 font-medium text-[#1E3A8A]">
 
-  <!-- DESKTOP NAV -->
-  <nav class="hidden md:flex flex-1 justify-center gap-6 font-medium text-[#1E3A8A]">
+  <a href="<?= BASE_URL ?>index.php" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+    <i class="fa-solid fa-house"></i> Home
+  </a>
 
-      <a href="<?= BASE_URL ?>" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
-        <i class="fa-solid fa-house"></i> Home
-      </a>
+  <a href="<?= BASE_URL ?>pages/about.php" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+    <i class="fa-solid fa-building"></i> About Us
+  </a>
 
-      <a href="<?= BASE_URL ?>about" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
-        <i class="fa-solid fa-building"></i> About Us
-      </a>
+  <!-- SERVICES MEGA MENU -->
+  <div class="relative">
+    <button class="flex items-center gap-2 hover:text-red-500 transition duration-300" id="servicesBtn">
+      <i class="fa-solid fa-key"></i> Services <i class="fa fa-chevron-down text-xs"></i>
+    </button>
+    <div id="megaMenu" class="absolute hidden bg-white p-6 shadow-lg mt-3 rounded-lg min-w-[360px] z-50 text-[#1E3A8A] grid grid-cols-2 gap-4 transition-all duration-300">
+<a href="<?= BASE_URL ?>pages/services/key-programming.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-key"></i> Car Key Programming & ECU
+</a>
 
-      <!-- SERVICES MEGA MENU -->
-      <div class="relative">
-        <button class="flex items-center gap-2 hover:text-red-500 transition duration-300" id="servicesBtn">
-          <i class="fa-solid fa-key"></i> Services <i class="fa fa-chevron-down text-xs"></i>
-        </button>
-        <div id="megaMenu" class="absolute hidden bg-white p-6 shadow-lg mt-3 rounded-lg min-w-[360px] z-50 text-[#1E3A8A] grid grid-cols-2 gap-4 transition-all duration-300">
-  <a href="<?= BASE_URL ?>services/key-programming" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-key"></i> Car Key Programming & ECU
-  </a>
-  <a href="<?= BASE_URL ?>services/key-replacement" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-key"></i> Lost Car Key Replacement
-  </a>
-  <a href="<?= BASE_URL ?>services/key-cutting" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-keyboard"></i> Key Cutting & Duplication
-  </a>
-  <a href="<?= BASE_URL ?>services/gps-car-tracking" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-location-dot"></i> GPS Car Tracking
-  </a>
-  <a href="<?= BASE_URL ?>services/ignition-repair" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-car-battery"></i> Ignition Repair & Replacement
-  </a>
-  <a href="<?= BASE_URL ?>services/car-alarm-system" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-bell"></i> Car Alarm System
-  </a>
-  <a href="<?= BASE_URL ?>services/car-radio-installation" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-radio"></i> Car Radio Unlocking & Installation
-  </a>
-  <a href="<?= BASE_URL ?>services/egr-dpf-delete" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-cogs"></i> EGR & DPF Delete
-  </a>
-  <a href="<?= BASE_URL ?>services/electronic-steering-lock" class="hover:text-red-500 flex items-center gap-2">
-    <i class="fa-solid fa-lock"></i> Electronic Steering Lock
-  </a>
-</div>
-      </div>
+<a href="<?= BASE_URL ?>pages/services/key-replacement.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-key"></i> Lost Car Key Replacement
+</a>
 
-      <a href="<?= BASE_URL ?>service-areas" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
-        <i class="fa-solid fa-map-location-dot"></i> Service Areas
-      </a>
-      <a href="<?= BASE_URL ?>contact" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
-        <i class="fa-solid fa-envelope"></i> Contact Us
-      </a>
+<a href="<?= BASE_URL ?>pages/services/key-cutting.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-keyboard"></i> Key Cutting & Duplication
+</a>
 
-    </nav>
+<a href="<?= BASE_URL ?>pages/services/gps-car-tracking.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-location-dot"></i> GPS Car Tracking
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/ignition-repair.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-car-battery"></i> Ignition Repair & Replacement
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/car-alarm-system.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-bell"></i> Car Alarm System
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/car-radio-installation.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-radio"></i> Car Radio Unlocking & Installation
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/egr-dpf-delete.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-cogs"></i> EGR & DPF Delete
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/electronic-steering-lock.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-lock"></i> Electronic Steering Lock
+</a>
+    </div>
+  </div>
+
+  <a href="<?= BASE_URL ?>pages/service-areas.php" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+    <i class="fa-solid fa-map-location-dot"></i> Service Areas
+  </a>
+
+  <a href="<?= BASE_URL ?>pages/contact.php" class="flex items-center gap-2 hover:text-red-500 transition duration-300">
+    <i class="fa-solid fa-envelope"></i> Contact Us
+  </a>
+
+</nav>
 
     <!-- MOBILE MENU BUTTON -->
     <button id="menuBtn" class="md:hidden text-black text-2xl ml-3">
@@ -152,30 +162,73 @@ $pageTitle = $pageTitle ?? "Cartronique Automotive Locksmith";
       </button>
     </div>
 
+    <!-- HOME -->
     <a href="<?= BASE_URL ?>" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="<?= BASE_URL ?>about" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-building"></i> About Us</a>
+
+    <!-- ABOUT -->
+    <a href="<?= BASE_URL ?>pages/about.php" class="flex items-center gap-3 hover:text-red-500">
+      <i class="fa-solid fa-building"></i> About Us
+    </a>
 
     <!-- MOBILE SERVICES ACCORDION -->
     <button id="mobileServicesBtn" class="flex justify-between items-center w-full py-2">
       <span class="flex items-center gap-3"><i class="fa-solid fa-key"></i> Services</span>
       <i id="mobileServicesIcon" class="fa fa-chevron-down transition-transform duration-300"></i>
     </button>
-<div id="mobileServicesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 flex flex-col ml-4 gap-3">
-  <a href="<?= BASE_URL ?>services/key-programming" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-key"></i> Car Key Programming & ECU</a>
-  <a href="<?= BASE_URL ?>services/key-replacement" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-key"></i> Lost Car Key Replacement</a>
-  <a href="<?= BASE_URL ?>services/key-cutting" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-keyboard"></i> Key Cutting & Duplication</a>
-  <a href="<?= BASE_URL ?>services/gps-car-tracking" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> GPS Car Tracking</a>
-  <a href="<?= BASE_URL ?>services/ignition-repair" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-car-battery"></i> Ignition Repair & Replacement</a>
-  <a href="<?= BASE_URL ?>services/car-alarm-system" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-bell"></i> Car Alarm System</a>
-  <a href="<?= BASE_URL ?>services/car-radio-installation" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-radio"></i> Car Radio Unlocking & Installation</a>
-  <a href="<?= BASE_URL ?>services/egr-dpf-delete" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-cogs"></i> EGR & DPF Delete</a>
-  <a href="<?= BASE_URL ?>services/electronic-steering-lock" class="hover:text-red-500 flex items-center gap-2"><i class="fa-solid fa-lock"></i> Electronic Steering Lock</a>
+
+    <div id="mobileServicesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 flex flex-col ml-4 gap-3">
+      <a href="<?= BASE_URL ?>pages/services/key-programming.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-key"></i> Car Key Programming & ECU
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/key-replacement.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-key"></i> Lost Car Key Replacement
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/key-cutting.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-keyboard"></i> Key Cutting & Duplication
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/gps-car-tracking.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-location-dot"></i> GPS Car Tracking
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/ignition-repair.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-car-battery"></i> Ignition Repair & Replacement
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/car-alarm-system.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-bell"></i> Car Alarm System
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/car-radio-installation.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-radio"></i> Car Radio Unlocking & Installation
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/egr-dpf-delete.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-cogs"></i> EGR & DPF Delete
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/electronic-steering-lock.php" class="hover:text-red-500 flex items-center gap-2">
+  <i class="fa-solid fa-lock"></i> Electronic Steering Lock
+</a>
 </div>
 
-    <a href="<?= BASE_URL ?>service-areas" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-map-location-dot"></i> Service Areas</a>
-    <a href="<?= BASE_URL ?>contact" class="flex items-center gap-3 hover:text-red-500"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+  
+    <!-- SERVICE AREAS -->
+<a href="<?= BASE_URL ?>pages/service-areas.php" class="flex items-center gap-3 hover:text-red-500">
+  <i class="fa-solid fa-map-location-dot"></i> Service Areas
+</a>
 
-    <a href="<?= BASE_URL ?>contact" class="bg-red-600 text-white px-5 py-2 rounded-full text-center mt-auto hover:bg-red-700 transition duration-300">Request Quote</a>
+<!-- CONTACT US -->
+<a href="<?= BASE_URL ?>pages/contact.php" class="flex items-center gap-3 hover:text-red-500">
+  <i class="fa-solid fa-envelope"></i> Contact Us
+</a>
+
+<!-- REQUEST QUOTE BUTTON -->
+<a href="<?= BASE_URL ?>pages/contact.php" class="bg-red-600 text-white px-5 py-2 rounded-full text-center mt-auto hover:bg-red-700 transition duration-300">
+  Request Quote
+</a>
 
   </div>
 </div>
